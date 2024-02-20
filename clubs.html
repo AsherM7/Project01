@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="resources/style/style.css">
 </head>
 <body>
 
 <header class="header">
-    <img src="AM%20Logo.png" alt="Top Banner" class="logo">
+    <img src="resources/images/AM%20Logo.png" alt="Top Banner" class="logo">
     <nav class="navigation">
         <a href="index.html">Home Page</a>
         <a href="resume.html">Resume</a>
@@ -28,7 +28,7 @@
     <div class="clubs-container">
         <!-- Club 1 -->
         <div class="club">
-            <img src="FCA%20Logo.png" alt="FCA Logo" style="width: 300px; height: 250px;"> <br>
+            <img src="resources/images/FCA%20Logo.png" alt="FCA Logo" style="width: 300px; height: 250px;"> <br>
             <h2>Fundamentals of Computing Association</h2>
             <p>
                 The FCA provides students with a platform to build and enhance technical skills desired by employers in
@@ -40,7 +40,7 @@
 
         <!-- Club 2 -->
         <div class="club">
-            <img src="ISTUSC%20Logo.png" alt="ISTUSC Logo" style="width: 300px; height: 250px;">
+            <img src="resources/images/ISTUSC%20Logo.png" alt="ISTUSC Logo" style="width: 300px; height: 250px;">
             <h2>IST Undergraduate Student Council</h2>
             <p>
                 The IST undergraduate student council comprises elected executive members and acts as a representative
@@ -52,6 +52,7 @@
         </div>
     </div>
 </div>
+<br>
 
 <footer>
     <ul>
@@ -66,12 +67,53 @@
 
 <!-- Side navigation -->
 <div class="sidenav" id="mySidebar">
-    <a href=" ">Contact Form</a>
-    <a href=" ">Calendar</a>
-    <a href=" ">Article</a>
+    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{xkndrezd}" method="post">
+        <fieldset id="fs-frm-inputs">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" class="form-control" name="name" id="full-name" placeholder="First and Last" required=""> <br>
+            </div>
+            <div class="form-group">
+                <label for="email-address">Email Address</label>
+                <input type="email" class="form-control" name="_replyto" id="email-address" placeholder="email@domain.tld" required=""> <br>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" rows="5" name="message" id="message" placeholder="Your Message" required=""></textarea> <br>
+            </div>
+            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <hr> <br>
+
+    <div id="apiDisplay"></div>
+
+    <script>
+        const div = document.getElementById('apiDisplay');
+        const url = 'https://icanhazdadjoke.com/';
+
+        const headers = new Headers({
+            'Accept': 'application/json'
+        });
+
+        fetch(url, { headers })
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                console.log(data);
+                let p = document.createElement('p');
+                p.innerHTML = `${data.joke}`;
+                div.appendChild(p);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    </script>
 
 </div>
-
 <script>
     function w3_open() {
         document.getElementById("mySidebar").style.width = "200px";
