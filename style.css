@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+.header {
+    font-family: Futura, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+.main {
+    font-family: Roboto, sans-serif;
+    color: #333;
+    padding: 20px;
+
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.navigation {
+    display: flex; /* Aligns the navigation links in a row */
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333;
+    padding: 0 10px; /* Spacing between links */
+    font-size: 18px; /* Size of the navigation links */
+}
+
+
+/* Side navigation styles */
+.sidenav {
+    width: 200px; /* Width of sidebar */
+    font-family: 'Futura', sans-serif;
+    position: absolute;
+    top: 400px;
+    left: 0; /* Keep it on the left side */
+    background-color: #e7e5e0;
+    border-right: 1px solid black; /* Border to separate from main content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.sidenav a {
+    padding: 11px 16px;
+    text-decoration: none;
+    background-color: #e7e5e0; /* This should be the same as .sidenav's background-color */
+    font-size: 18px;
+    color: black;
+    display: block;
+    border-bottom: 1px solid dimgray; /* If you want the border to extend to the edge, remove padding */
+}
+
+.sidenav a:hover {
+    background-color: lightcyan;
+}
+
+/* Main content styles */
+.main {
+    background-color: #e7e5e0;
+    font-family: Futura, sans-serif;
+    margin-left: 220px;
+    padding: 20px;
+
+}
+
+.main h1 {
+    text-align: center;
+}
+
+
+.logo {
+    height: 100px;
+}
+
+
+
+
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        position: static;
+        width: auto;
+    }
+    .main {
+        margin-left: 0;
+    }
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    font-family: Futura, sans-serif;
+    padding: 16px;
+    background-color: lightgray;
+    position: relative;
+    width: 100%;
+    clear: both; /* Ensures that the footer does not overlap floated elements */
+}
+
+
+footer a {
+    padding: 8px;
+    color: black;
+}
+
+
+/* Clubs Section Styles */
+.clubs-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; /* This will space out the club divs */
+    align-items: flex-start; /* Aligns items to the start of the flex container */
+    padding: 20px;
+    flex-wrap: wrap; /* Allows the items to wrap to the next line on small screens */
+}
+
+.club {
+    width: 30%; /* Adjust the width as necessary */
+    margin: 10px;
+    text-align: center; /* Center the content */
+}
+
+.club-logo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.club h2 {
+    margin-bottom: 15px;
+}
+
+.club p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments for clubs section */
+@media (max-width: 768px) {
+    .clubs-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .club {
+        width: 80%; /* Full width for small screens */
+    }
+}
+
+
+
