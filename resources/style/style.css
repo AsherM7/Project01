@@ -159,19 +159,43 @@ footer a {
 }
 
 
+/* Resume Section Styles */
+.resume-section h3 {
+    border-bottom: 2px solid #000; /* Creates a solid line */
+    padding-bottom: 5px; /* Adds space between the text and the line */
+    margin-bottom: 10px; /* Adds space after the line */
+}
 
 
 
+/* Education Section Styles */
+.education-entry {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Creates a responsive grid layout */
+    gap: 20px; /* Space between grid items */
+}
+
+.education-entry h3 {
+    margin-top: 15px;
+
+    color: #000;
+    grid-column: 1 / -1;
+}
+
+.education-entry div {
+}
+
+.education-entry div:last-child {
+    margin-right: 0;
+}
+
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-    .major-info-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .major-details, .leadership-experience, .courses {
-        flex-basis: 100%; /* Full width for small screens */
+    .education-entry {
+        grid-template-columns: 1fr; /* Stacks the grid items into a single column on small screens */
     }
 }
+
 
 /* Clubs Section Styles */
 .clubs-container {
