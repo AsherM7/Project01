@@ -1,0 +1,19 @@
+[
+
+  {
+    "year": "2020",
+    "title": "TBB - Personal Project",
+    "description": "I developed a computer-game application using the Python programming language on the video game development platform, PixelPad. This was my submission for the 47th Congressional District of California in the Congressional App Challenge of 2020.",
+    "imageSrc": "resources/images/Project%201%20Image.png",
+    "imageAlt": "2020 Personal Project",
+    "imageWidth": "300px"
+  },
+  {
+    "year": "2021",
+    "title": "Surplus Food 360 - Personal Project",
+    "description": "I developed a web application to showcase surplus food availability from restaurants, addressing food wastage. I utilized the Atom text editor effectively to use programming languages such as HTML, CSS, and JavaScript. This was my submission for the 47th Congressional District of California in the Congressional App Challenge of 2021.",
+    "imageSrc": "resources/images/Project%202%20Image.png",
+    "imageAlt": "2021 Personal Project",
+    "imageWidth": "400px"
+  }
+]
